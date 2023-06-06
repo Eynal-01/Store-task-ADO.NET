@@ -11,7 +11,7 @@ using System.Windows;
 
 namespace Store_task_ADO.NET.ViewModels
 {
-    public class MoreAboutProductWindowViewModel : BaseViewModel
+    public class AboutProductViewModel : BaseViewModel
     {
         public Window ProductWindow { get; set; }
 
@@ -26,7 +26,7 @@ namespace Store_task_ADO.NET.ViewModels
             set { product = value; OnPropertyChanged(); }
         }
 
-        public MoreAboutProductWindowViewModel(Product product, ImageSource _imageSource, Window productWindow)
+        public AboutProductViewModel(Product product, Window productWindow)
         {
             Product = product;
             ProductWindow = productWindow;
@@ -40,7 +40,7 @@ namespace Store_task_ADO.NET.ViewModels
                 //DatabaseHelper.AddProductsToCollectionFromDatabase(400, 20, App.ProductViews);
                 App.ProductViews.Remove(App.ProductViews.FirstOrDefault(p => p.Id.Text == Product.Id.ToString()));
                 //var view = ProductViews.FirstOrDefault(p => (p.DataContext as ProductUCViewModel).Product.Id == Product.Id);
-                //ProductViews.Remove(view);
+                //ProductViews.Remove(view);..
             });
 
             SaveChangesCommand = new RelayCommand(async (e) =>

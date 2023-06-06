@@ -56,13 +56,21 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="ViewModels\AboutProduct.cs" />
+    <Compile Include="ViewModels\AboutProductViewModel.cs" />
     <Compile Include="ViewModels\BaseViewModel.cs" />
+    <Compile Include="ViewModels\MainWindowViewModel.cs" />
     <Compile Include="ViewModels\ProductUCViewModel.cs" />
+    <Compile Include="Views\AboutProductWindow.xaml.cs">
+      <DependentUpon>AboutProductWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\ProductUC.xaml.cs">
       <DependentUpon>ProductUC.xaml</DependentUpon>
     </Compile>
     <Page Include="Dictionaries\Dictionary.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AboutProductWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

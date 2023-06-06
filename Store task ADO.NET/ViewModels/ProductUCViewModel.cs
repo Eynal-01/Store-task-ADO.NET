@@ -1,5 +1,6 @@
 ﻿using Store_task_ADO.NET.Commands;
 using Store_task_ADO.NET.Models;
+using Store_task_ADO.NET.Views;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,12 +19,11 @@ namespace Store_task_ADO.NET.ViewModels
         public ProductUCViewModel(Product _product)
         {
             Product = _product;
-            //ImageSource = Helpers.ImageHelpers.StringToImageSource(Product.Image);
 
             MoreCommand = new RelayCommand((e) =>
             {
-                var aboutProductView = new MoreAboutProductWindow();
-                var aboutProductViewModel = new MoreAboutProductWindowViewModel(Product, ImageSource, aboutProductView);
+                var aboutProductView = new AboutProductWindow();
+                var aboutProductViewModel = new AboutProductViewModel(Product, aboutProductView);
                 aboutProductView.DataContext = aboutProductViewModel;
                 aboutProductView.Show();
             });
