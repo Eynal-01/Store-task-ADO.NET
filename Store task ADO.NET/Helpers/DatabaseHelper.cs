@@ -4,13 +4,13 @@ using Store_task_ADO.NET.Views;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
-using System.Data;
 using System.Data.SqlClient;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Store_task_ADO.NET.DatabaseHelper
+namespace Store_task_ADO.NET.Helpers
 {
     public class DatabaseHelper
     {
@@ -39,7 +39,7 @@ namespace Store_task_ADO.NET.DatabaseHelper
                         };
                         var productView = new ProductUC();
                         product.Price += "$";
-                        var productViewModel = new ProductUCViewModel();
+                        var productViewModel = new ProductUCViewModel(product);
                         productView.DataContext = productViewModel;
                         if (!addedProductNames.Contains(product.Name))
                         {

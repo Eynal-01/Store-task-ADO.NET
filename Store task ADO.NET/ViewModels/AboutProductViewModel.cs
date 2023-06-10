@@ -1,6 +1,6 @@
 ﻿using Store_task_ADO.NET.Commands;
 using Store_task_ADO.NET.Models;
-using Store_task_ADO.NET.DatabaseHelper;
+using Store_task_ADO.NET.Helpers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
