@@ -3,9 +3,10 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-             xmlns:local="clr-namespace:Store_task_ADO.NET.Views" xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+             xmlns:local="clr-namespace:Store_task_ADO.NET.Views" 
+             xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             d:DesignHeight="570" d:DesignWidth="1100">
     <Grid Background="white">
         <Grid.RowDefinitions>
             <RowDefinition Height="*"></RowDefinition>
@@ -39,22 +40,21 @@
         <Grid Grid.Row="0"
               Grid.Column="1">
             <StackPanel Orientation="Horizontal">
-                <!--<TextBox
-                         Name="SearchTB"
+                <TextBox 
+                         x:Name="SearchTB"
                          Background="Transparent"
                          Width="300"
                          Margin="32,0,0,0"
-                         Height="34"
+                         Height="35"
                          FontSize="25"
                          Padding="4,0,4,0"
                          BorderBrush="Transparent"
-                         BorderThickness="0"
+                         BorderThickness="1"
                          Text="Search for product . . .">
                     <TextBox.InputBindings>
                         <KeyBinding Key="Return" Command="{Binding SearchCommand}"></KeyBinding>
                     </TextBox.InputBindings>
                     <i:Interaction.Triggers>
-
                         <i:EventTrigger EventName="MouseEnter">
                             <i:InvokeCommandAction Command="{Binding MouseEnterCommand}"/>
                         </i:EventTrigger>
@@ -63,15 +63,15 @@
                             <i:InvokeCommandAction Command="{Binding MouseLeaveCommand}"/>
                         </i:EventTrigger>
 
-                        --><!--<i:EventTrigger EventName="GotFocus">
+                        <!--<i:EventTrigger EventName="GotFocus">
                             <i:InvokeCommandAction Command="{Binding IsFocusedCommand}"/>
                         </i:EventTrigger>
 
                         <i:EventTrigger EventName="LostFocus">
                             <i:InvokeCommandAction Command="{Binding IsNotFocusedCommand}"/>
-                        </i:EventTrigger>--><!--
+                        </i:EventTrigger>-->
                     </i:Interaction.Triggers>
-                </TextBox>-->
+                </TextBox>
 
                 <Button Background="Transparent"
                         BorderBrush="Transparent"
@@ -88,7 +88,7 @@
                         Height="45"
                         Width="215"
                         Cursor="Hand"
-                        Name="BasketBtn"
+                        x:Name="BasketBtn"
                         Margin="45,0,0,0"
                         Command="{Binding SearchCommand}">
                     <StackPanel Orientation="Horizontal">
@@ -105,9 +105,10 @@
                         Height="45"
                         Cursor="Hand"
                         x:Name="account"
+                        Margin="35,0,0,0"
                         Command="{Binding SearchCommand}">
                     <StackPanel Orientation="Horizontal">
-                        <TextBlock Text="Cavid"
+                        <TextBlock Text="Admin"
                                    Margin="5,0,0,0"
                                    Foreground="Black"
                                    FontSize="22"
@@ -120,12 +121,25 @@
         </Grid>
 
         <Grid Grid.Row="1"
+              Grid.Column="0">
+            <StackPanel Orientation="Vertical" Margin="0,50,0,0">
+                <TextBlock Text="Categories"
+                           FontSize="16"
+                           Margin="45,40,0,0"
+                           Cursor="Hand"
+                           FontWeight="Bold"
+                           Foreground="DarkBlue">
+                </TextBlock>
+            </StackPanel>
+        </Grid>
+
+        <Grid Grid.Row="1"
               Grid.Column="1">
             <ScrollViewer HorizontalScrollBarVisibility="Disabled"
-                          VerticalScrollBarVisibility="Auto" Height="Auto" Width="800" HorizontalAlignment="Center">
-                <ListView Height="Auto" ItemsSource="{Binding ProductViews,Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" RenderTransformOrigin="0.5,0.5">
-                    <!--<ListView.View>
-                        <GridView ColumnHeaderContainerStyle="{StaticResource myHeaderStyle}">
+                          VerticalScrollBarVisibility="Auto" Height="Auto" Width="860" HorizontalAlignment="Center">
+                <ListView Height="Auto" ItemsSource="{Binding ProductViews,Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Background="#0197F6" RenderTransformOrigin="0.5,0.5">
+                    <ListView.View>
+                        <GridView >
                             <GridViewColumn>
                                 <GridViewColumn.CellTemplate>
                                     <DataTemplate>
@@ -140,7 +154,8 @@
                                 </GridViewColumn.CellTemplate>
                             </GridViewColumn>
                         </GridView>
-                    </ListView.View>-->
+                    </ListView.View>
+
                     <ListView.Template>
                         <ControlTemplate TargetType="ListView">
                             <Border BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderBrush}">

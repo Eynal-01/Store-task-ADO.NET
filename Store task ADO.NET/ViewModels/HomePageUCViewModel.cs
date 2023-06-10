@@ -3,6 +3,8 @@ using Store_task_ADO.NET.Views;
 using System.Collections.ObjectModel;
 using System.Windows.Controls;
 using Store_task_ADO.NET.Helpers;
+using System;
+using Store_task_ADO.NET.Models;
 
 namespace Store_task_ADO.NET.ViewModels
 {
@@ -39,22 +41,21 @@ namespace Store_task_ADO.NET.ViewModels
             //    }
             //});
 
-            //MouseEnterCommand = new RelayCommand((m) =>
-            //{
-            //    if (SearchTb.Text.Trim() == Constants.SearchBoxDefaultText)
-            //    {
-            //        SearchTb.Text = String.Empty;
-            //    }
-            //});
+            MouseEnterCommand = new RelayCommand((m) =>
+            {
+                if (SearchTb.Text.Trim() == "Search for product")
+                {
+                    SearchTb.Text = String.Empty;
+                }
+            });
 
-            //MouseLeaveCommand = new RelayCommand((m) =>
-            //{
-            //    if (SearchTb.Text.Trim() == String.Empty && SearchTb.IsFocused == false)
-            //    {
-            //        SearchTb.Text = Constants.SearchBoxDefaultText;
-            //    }
-            //});
-
+            MouseLeaveCommand = new RelayCommand((m) =>
+            {
+                if (SearchTb.Text.Trim() == String.Empty && SearchTb.IsFocused == false)
+                {
+                    SearchTb.Text = "Search for product";
+                }
+            });
 
             //IsNotFocusedCommand = new RelayCommand((i) =>
             //{
@@ -65,7 +66,8 @@ namespace Store_task_ADO.NET.ViewModels
             //    }
             //});
 
-            //SearchCommand = new RelayCommand((s) =>
+            //SearchCommand = new RelayCommand((s)
+            //=>
             //{
 
 
