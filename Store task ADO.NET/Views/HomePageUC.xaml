@@ -27,13 +27,6 @@
                            Margin="0,5,0,0"
                            Text="Bravo">
                 </TextBlock>
-
-                <TextBlock FontSize="15"
-                           Margin="0,-5,0,0"
-                           Text="is Everywhere"
-                           TextAlignment="Center"
-                           FontWeight="Medium">
-                </TextBlock>
             </StackPanel>
         </Grid>
 
@@ -48,9 +41,8 @@
                          Height="35"
                          FontSize="25"
                          Padding="4,0,4,0"
-                         BorderBrush="Transparent"
                          BorderThickness="1"
-                         Text="Search for product . . .">
+                         Text="Search . . .">
                     <TextBox.InputBindings>
                         <KeyBinding Key="Return" Command="{Binding SearchCommand}"></KeyBinding>
                     </TextBox.InputBindings>
@@ -84,7 +76,7 @@
                 </Button>
 
                 <Button Background="Transparent"
-                        BorderBrush="Transparent"
+                        BorderThickness="1"
                         Height="45"
                         Width="215"
                         Cursor="Hand"
@@ -109,11 +101,9 @@
                         Command="{Binding SearchCommand}">
                     <StackPanel Orientation="Horizontal">
                         <TextBlock Text="Admin"
-                                   Margin="5,0,0,0"
                                    Foreground="Black"
                                    FontSize="22"
-                                   Padding="0,6">
-                        </TextBlock>
+                                   Padding="0,6"/>
                     </StackPanel>
                 </Button>
 

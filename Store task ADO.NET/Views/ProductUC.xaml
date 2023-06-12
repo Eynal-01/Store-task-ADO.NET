@@ -58,7 +58,7 @@
                             Background="#00B713"
                             BorderThickness="0"
                             Command="{Binding AddToBasketCommand}"
-                            Cursor="Hand" Canvas.Left="146" Canvas.Top="10" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            Cursor="Hand" Canvas.Left="125" Canvas.Top="9" HorizontalAlignment="Left" VerticalAlignment="Center">
                             <Button.Resources>
                                 <Style TargetType="Border">
                                     <Setter Property="CornerRadius" Value="16"></Setter>
@@ -66,7 +66,7 @@
                             </Button.Resources>
                         </Button>
 
-                        <Button Width="80"
+                        <!--<Button Width="80"
                             Height="30"
                             Content="More"
                                 BorderThickness="0"
@@ -80,7 +80,7 @@
                                     <Setter Property="CornerRadius" Value="16"></Setter>
                                 </Style>
                             </Button.Resources>
-                        </Button>
+                        </Button>-->
                     </Canvas>
                 </StackPanel>
             </StackPanel>

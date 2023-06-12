@@ -13,6 +13,7 @@ namespace Store_task_ADO.NET.ViewModels
     public class ProductUCViewModel : BaseViewModel
     {
         public RelayCommand MoreCommand { get; set; }
+        public RelayCommand AddToBasketCommand { get; set; }
 
         public Product Product { get; set; }
 
